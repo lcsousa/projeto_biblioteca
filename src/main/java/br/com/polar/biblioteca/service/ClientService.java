@@ -2,21 +2,22 @@ package br.com.polar.biblioteca.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.polar.biblioteca.entity.Client;
-import br.com.polar.biblioteca.repository.ClientRepository;
 
 @Service
-public class ClientService {
+public interface ClientService {
 
-	@Autowired
-	private ClientRepository clientRepository;
-
-	public List<Client> findAll(){
-		return clientRepository.findAll();
-	}
-
+	//public List<Client> findAll();
 	
+	public Client findById(Long id);
+	
+	public List<Client> findByName(String name);
+	
+	public Client create(Client client);
+	
+	public Client update(Client client);
+	
+	public void delete(Long id);
 }
