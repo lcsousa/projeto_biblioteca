@@ -9,7 +9,6 @@ import br.com.polar.biblioteca.entity.Client;
 @Service
 public interface ClientService {
 
-	//public List<Client> findAll();
 	
 	public Client findById(Long id);
 	

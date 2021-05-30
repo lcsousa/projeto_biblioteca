@@ -16,10 +16,14 @@ public class Client {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(value = "Código único do cliente",example = "1")
 	private Long id;
-	@ApiModelProperty(value = "nome do cliente", example = "maria jose")
+	@ApiModelProperty(value = "Nome do cliente", example = "maria jose")
 	private String name;
-	@ApiModelProperty(value = "data de nascimento do cliente",example = "2020-02-02")
+	@ApiModelProperty(value = "Data de nascimento do cliente",example = "2020-02-02")
 	private LocalDate birthDate;
+	@ApiModelProperty(value = "Cadastro único da pessoa",example = "55522233344")
+	private String cpf;
+	@ApiModelProperty(value = "Telefone do cliente",example = "75-99999-9999")
+	private String tell;
 	
 	public Long getId() {
 		return id;
@@ -38,6 +42,18 @@ public class Client {
 	}
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getTell() {
+		return tell;
+	}
+	public void setTell(String tell) {
+		this.tell = tell;
 	}
 	
 	
